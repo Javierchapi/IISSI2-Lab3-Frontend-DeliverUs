@@ -16,31 +16,33 @@ import ImagePicker from '../../components/ImagePicker'
 
 export default function CreateRestaurantScreen() {
   return (
-    <View style={{ alignItems: 'center' }}>
-      <View style={{ width: '60%' }}>
-        <InputItem name="sampleInput" label="Sample input" />
-        <InputItem name="sampleInput" label="Sample input" />
-        <InputItem name="sampleInput" label="Sample input" />
-        <InputItem name="sampleInput" label="Sample input" />
-        <InputItem name="sampleInput" label="Sample input" />
-        <InputItem name="sampleInput" label="Sample input" />
-        <InputItem name="sampleInput" label="Sample input" />
-        <InputItem name="sampleInput" label="Sample input" />
-        <Pressable
-          onPress={() => console.log('Button pressed')}
-          style={({ pressed }) => [
-            {
-              backgroundColor: pressed
-                ? GlobalStyles.brandPrimaryTap
-                : GlobalStyles.brandPrimary
-            },
-            styles.button
-          ]}
-        >
-          <TextRegular textStyle={styles.text}>Create restaurant</TextRegular>
-        </Pressable>
+    <ScrollView>
+      <View style={{ alignItems: 'center' }}>
+        <View style={{ width: '60%' }}>
+          <InputItem name="sampleInput" label="Sample input" />
+          <InputItem name="sampleInput" label="Sample input" />
+          <InputItem name="sampleInput" label="Sample input" />
+          <InputItem name="sampleInput" label="Sample input" />
+          <InputItem name="sampleInput" label="Sample input" />
+          <InputItem name="sampleInput" label="Sample input" />
+          <InputItem name="sampleInput" label="Sample input" />
+          <InputItem name="sampleInput" label="Sample input" />
+          <Pressable
+            onPress={() => console.log('Button pressed')}
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed
+                  ? GlobalStyles.brandPrimaryTap
+                  : GlobalStyles.brandPrimary
+              },
+              styles.button
+            ]}
+          >
+            <TextRegular textStyle={styles.text}>Create restaurant</TextRegular>
+          </Pressable>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   )
 }
 
