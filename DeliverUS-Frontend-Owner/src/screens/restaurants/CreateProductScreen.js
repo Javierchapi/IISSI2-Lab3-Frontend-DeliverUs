@@ -75,11 +75,11 @@ export default function CreateProductScreen({ navigation, route }) {
               <TextRegular>Is it available?</TextRegular>
               <Switch
                 trackColor={{
-                  false: GlobalStyles.brandSecondary,
-                  true: GlobalStyles.brandPrimary
+                  false: GlobalStyles.brandPrimary,
+                  true: GlobalStyles.brandSuccess
                 }}
                 thumbColor={
-                  values.availability ? GlobalStyles.brandSecondary : '#f4f3f4'
+                  values.availability ? GlobalStyles.brandSecondary : '#fafafa'
                 }
                 value={values.availability}
                 style={styles.switch}
