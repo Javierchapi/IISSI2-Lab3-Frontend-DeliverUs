@@ -72,6 +72,19 @@ export default function CreateProductScreen({ navigation, route }) {
               />
               <InputItem name="description" label="description" />
               <InputItem name="price" label="price" />
+              <TextRegular>Is it available?</TextRegular>
+              <Switch
+                trackColor={{
+                  false: GlobalStyles.brandSecondary,
+                  true: GlobalStyles.brandPrimary
+                }}
+                thumbColor={
+                  values.availability ? GlobalStyles.brandSecondary : '#f4f3f4'
+                }
+                value={values.availability}
+                style={styles.switch}
+                onValueChange={value => setFieldValue('availability', value)} // si la función es más compleja, podemos invocar otra función así onValueChange={toggleSwitch}
+              />
               <ImagePicker
                 label="Product:"
                 image={values.image}
@@ -129,5 +142,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignSelf: 'center',
     marginTop: 5
+  },
+  switch: {
+    marginTop: 20
   }
 })
